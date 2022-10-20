@@ -50,7 +50,7 @@ public class CoursesService {
         coursesDto.setAvailability(entity.getAvailability());
         return coursesDto;
     }
-    public CoursesDto deleteCourses(long courseId){
+    public CoursesDto deleteCourses(int courseId){
         CoursesDto coursesDto = new CoursesDto();
        Optional<CoursesEntity> coursesEntityOptional = coursesRepository.findById(courseId);
         if(coursesEntityOptional.isPresent()){
